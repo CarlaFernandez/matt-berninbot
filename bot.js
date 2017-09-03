@@ -52,7 +52,6 @@ function sendSong(channelID, user) {
 function buildMessage() {
     msg = ""
     for (i = 0; i < 4; i++) {
-        logger.info("Iteration " + i);
         msg += getRandomLine() + "\n";
     }
 
