@@ -1,6 +1,9 @@
 // Lines the song will have
 var NUM_LINES = 4;
 
+var express = require('express');
+var app     = express();
+app.set('port', (process.env.PORT || 5000));
 var discord = require('discord.io');
 var logger = require('winston');
 var auth = require('./auth.json');
