@@ -52,6 +52,7 @@ function sendSong(channelID, user) {
 function buildMessage() {
     msg = ""
     for (i = 0; i < 4; i++) {
+        logger.info("Iteration " + i);
         msg += getRandomLine() + "\n";
     }
 
@@ -61,6 +62,9 @@ function buildMessage() {
 function getRandomLine() {
     min = 0;
     max = Math.floor(lyrics.length - 1);
-    random = Math.floor(Math.random() * (max - min + 1)) + min;
+    do {
+        random = Math.floor(Math.random() * (max - min + 1)) + min;
+    } while (!lyrics[random].trim());
+
     return lyrics[random];
 }
