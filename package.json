@@ -4,6 +4,10 @@
   "description": "I create songs mixing random The National lyrics",
   "main": "bot.js",
   "author": "itscarlayall",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bot.js"
+  },
   "dependencies": {
     "discord.io": "^2.5.2",
     "winston": "^2.3.1"
