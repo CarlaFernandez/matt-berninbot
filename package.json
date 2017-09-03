@@ -1,0 +1,11 @@
+{
+  "name": "matt-berninbot",
+  "version": "1.0.0",
+  "description": "I create songs mixing random The National lyrics",
+  "main": "bot.js",
+  "author": "itscarlayall",
+  "dependencies": {
+    "discord.io": "^2.5.2",
+    "winston": "^2.3.1"
+  }
+}
