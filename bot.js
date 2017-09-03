@@ -52,7 +52,7 @@ function sendSong(channelID, user) {
 function buildMessage() {
     msg = ""
     for (i = 0; i < 4; i++) {
-        msg += getRandomLine();
+        msg += getRandomLine() + "\n";
     }
 
     return msg;
