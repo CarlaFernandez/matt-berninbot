@@ -1,3 +1,6 @@
+// Lines the song will have
+var NUM_LINES = 4;
+
 var discord = require('discord.io');
 var logger = require('winston');
 var auth = require('./auth.json');
@@ -50,9 +53,11 @@ function sendSong(channelID, user) {
 }
 
 function buildMessage() {
-    msg = ""
-    for (i = 0; i < 4; i++) {
-        msg += getRandomLine() + "\n";
+    var msg = "";
+    for (i = 0; i < NUM_LINES; i++) {
+        line = getRandomLine();
+        msg += line.charAt(0).toUpperCase() 
+            + line.slice(1) + "\n";
     }
 
     return msg;
