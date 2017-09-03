@@ -13,7 +13,11 @@ logger.add(logger.transports.Console, {
 });
 logger.level = 'debug';
 
-var lyrics = fs.readFileSync('./lyrics.txt').toString().split("\n");
+var lyrics;
+fs.readFile('./lyrics.txt', function(err, data) {
+    if(err) throw err;
+    lyrics = data.toString().split("\n");
+});
 
 // Initialize Discord Bot
 var bot = new discord.Client({
